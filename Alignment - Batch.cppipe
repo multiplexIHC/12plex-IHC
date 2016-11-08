@@ -1,0 +1,1635 @@
+CellProfiler Pipeline: http://www.cellprofiler.org
+Version:3
+DateRevision:20140723174500
+GitHash:6c2d896
+ModuleCount:95
+HasImagePlaneDetails:False
+
+Images:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\'To begin creating your project, use the Images module to compile a list of files and/or folders that you want to analyze. You can also specify a set of rules to include only the desired files in your selected folders.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    :
+    Filter images?:Images only
+    Select the rule criteria:and (extension does isimage) (directory doesnot containregexp "\x5B\\\\\\\\\\\\\\\\/\x5D\\\\\\\\.")
+
+Metadata:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\'The Metadata module optionally allows you to extract information describing your images (i.e, metadata) which will be stored along with your measurements. This information can be contained in the file name and/or location, or in an external file.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Extract metadata?:No
+    Metadata data type:Text
+    Metadata types:{}
+    Extraction method count:1
+    Metadata extraction method:Extract from file/folder names
+    Metadata source:File name
+    Regular expression:^(?P<Plate>.*)_(?P<Well>\x5BA-P\x5D\x5B0-9\x5D{2})_s(?P<Site>\x5B0-9\x5D)_w(?P<ChannelNumber>\x5B0-9\x5D)
+    Regular expression:(?P<Date>\x5B0-9\x5D{4}_\x5B0-9\x5D{2}_\x5B0-9\x5D{2})$
+    Extract metadata from:All images
+    Select the filtering criteria:and (file does contain "")
+    Metadata file location:
+    Match file and image metadata:\x5B\x5D
+    Use case insensitive matching?:No
+
+NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:5|show_window:False|notes:\x5B\'The NamesAndTypes module allows you to assign a meaningful name to each image by which other modules will refer to it.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Assign a name to:Images matching rules
+    Select the image type:Grayscale image
+    Name to assign these images:DNA
+    Match metadata:\x5B\x5D
+    Image set matching method:Order
+    Set intensity range from:Image metadata
+    Assignments count:12
+    Single images count:0
+    Select the rule criteria:and (file does contain "One")
+    Name to assign these images:One
+    Name to assign these objects:Cell
+    Select the image type:Color image
+    Set intensity range from:Image metadata
+    Retain outlines of loaded objects?:No
+    Name the outline image:LoadedOutlines
+    Select the rule criteria:and (file does contain "Two")
+    Name to assign these images:Two
+    Name to assign these objects:Nucleus
+    Select the image type:Color image
+    Set intensity range from:Image metadata
+    Retain outlines of loaded objects?:No
+    Name the outline image:LoadedOutlines
+    Select the rule criteria:and (file does contain "Three")
+    Name to assign these images:Three
+    Name to assign these objects:Cytoplasm
+    Select the image type:Color image
+    Set intensity range from:Image metadata
+    Retain outlines of loaded objects?:No
+    Name the outline image:LoadedOutlines
+    Select the rule criteria:and (file does contain "Four")
+    Name to assign these images:Four
+    Name to assign these objects:Speckle
+    Select the image type:Color image
+    Set intensity range from:Image metadata
+    Retain outlines of loaded objects?:No
+    Name the outline image:LoadedOutlines
+    Select the rule criteria:and (file does contain "Five")
+    Name to assign these images:Five
+    Name to assign these objects:Object1
+    Select the image type:Color image
+    Set intensity range from:Image metadata
+    Retain outlines of loaded objects?:No
+    Name the outline image:LoadedOutlines
+    Select the rule criteria:and (file does contain "Six")
+    Name to assign these images:Six
+    Name to assign these objects:Object2
+    Select the image type:Color image
+    Set intensity range from:Image metadata
+    Retain outlines of loaded objects?:No
+    Name the outline image:LoadedOutlines
+    Select the rule criteria:and (file does contain "Seven")
+    Name to assign these images:Seven
+    Name to assign these objects:Object3
+    Select the image type:Color image
+    Set intensity range from:Image metadata
+    Retain outlines of loaded objects?:No
+    Name the outline image:LoadedOutlines
+    Select the rule criteria:and (file does contain "Eight")
+    Name to assign these images:Eight
+    Name to assign these objects:Object4
+    Select the image type:Color image
+    Set intensity range from:Image metadata
+    Retain outlines of loaded objects?:No
+    Name the outline image:LoadedOutlines
+    Select the rule criteria:and (file does contain "Nine")
+    Name to assign these images:Nine
+    Name to assign these objects:Object5
+    Select the image type:Color image
+    Set intensity range from:Image metadata
+    Retain outlines of loaded objects?:No
+    Name the outline image:LoadedOutlines
+    Select the rule criteria:and (file does contain "Ten")
+    Name to assign these images:Ten
+    Name to assign these objects:Object6
+    Select the image type:Color image
+    Set intensity range from:Image metadata
+    Retain outlines of loaded objects?:No
+    Name the outline image:LoadedOutlines
+    Select the rule criteria:and (file does contain "Eleven")
+    Name to assign these images:Eleven
+    Name to assign these objects:Object7
+    Select the image type:Color image
+    Set intensity range from:Image metadata
+    Retain outlines of loaded objects?:No
+    Name the outline image:LoadedOutlines
+    Select the rule criteria:and (file does contain "Twelve")
+    Name to assign these images:Twelve
+    Name to assign these objects:Object8
+    Select the image type:Color image
+    Set intensity range from:Image metadata
+    Retain outlines of loaded objects?:No
+    Name the outline image:LoadedOutlines
+
+Groups:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\'The Groups module optionally allows you to split your list of images into image subsets (groups) which will be processed independently of each other. Examples of groupings include screening batches, microtiter plates, time-lapse movies, etc.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Do you want to group your images?:No
+    grouping metadata count:1
+    Metadata category:None
+
+IdentifyObjectsManually:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:One
+    Name the objects to be identified:OneObject
+    Retain outlines of the identified objects?:No
+    Name the outlines:CellOutlines
+
+IdentifyObjectsManually:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Two
+    Name the objects to be identified:TwoObject
+    Retain outlines of the identified objects?:No
+    Name the outlines:CellOutlines
+
+IdentifyObjectsManually:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Three
+    Name the objects to be identified:ThreeObject
+    Retain outlines of the identified objects?:No
+    Name the outlines:CellOutlines
+
+IdentifyObjectsManually:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Four
+    Name the objects to be identified:FourObject
+    Retain outlines of the identified objects?:No
+    Name the outlines:CellOutlines
+
+IdentifyObjectsManually:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Five
+    Name the objects to be identified:FiveObject
+    Retain outlines of the identified objects?:No
+    Name the outlines:CellOutlines
+
+IdentifyObjectsManually:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Six
+    Name the objects to be identified:SixObject
+    Retain outlines of the identified objects?:No
+    Name the outlines:CellOutlines
+
+IdentifyObjectsManually:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Seven
+    Name the objects to be identified:SevenObject
+    Retain outlines of the identified objects?:No
+    Name the outlines:CellOutlines
+
+IdentifyObjectsManually:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Eight
+    Name the objects to be identified:EightObject
+    Retain outlines of the identified objects?:No
+    Name the outlines:CellOutlines
+
+IdentifyObjectsManually:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Nine
+    Name the objects to be identified:NineObject
+    Retain outlines of the identified objects?:No
+    Name the outlines:CellOutlines
+
+IdentifyObjectsManually:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Ten
+    Name the objects to be identified:TenObject
+    Retain outlines of the identified objects?:No
+    Name the outlines:CellOutlines
+
+IdentifyObjectsManually:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Eleven
+    Name the objects to be identified:ElevenObject
+    Retain outlines of the identified objects?:No
+    Name the outlines:CellOutlines
+
+IdentifyObjectsManually:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Twelve
+    Name the objects to be identified:TwelveObject
+    Retain outlines of the identified objects?:No
+    Name the outlines:CellOutlines
+
+SaveImages:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:One
+    Select the objects to save:None
+    Select the module display window to save:None
+    Select method for constructing file names:Single name
+    Select image name for file prefix:None
+    Enter single file name:AlignedFinal1
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tif
+    Output file location:Default Input Folder sub-folder\x7CPictures\\\\\\\\CP
+    Image bit depth:8
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Rescale the images? :No
+    Save as grayscale or color image?:Grayscale
+    Select colormap:gray
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...\x7C
+    Saved movie format:avi
+
+ConvertObjectsToImage:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:OneObject
+    Name the output image:OneImage
+    Select the color format:Binary (black & white)
+    Select the colormap:Default
+
+ConvertObjectsToImage:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:TwoObject
+    Name the output image:TwoImage
+    Select the color format:Binary (black & white)
+    Select the colormap:Default
+
+ColorToGray:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Two
+    Conversion method:Split
+    Image type:RGB
+    Name the output image:OrigGray
+    Relative weight of the red channel:1.0
+    Relative weight of the green channel:1.0
+    Relative weight of the blue channel:1.0
+    Convert red to gray?:Yes
+    Name the output image:TwoOrigRed
+    Convert green to gray?:Yes
+    Name the output image:TwoOrigGreen
+    Convert blue to gray?:Yes
+    Name the output image:TwoOrigBlue
+    Convert hue to gray?:Yes
+    Name the output image:OrigHue
+    Convert saturation to gray?:Yes
+    Name the output image:OrigSaturation
+    Convert value to gray?:Yes
+    Name the output image:OrigValue
+    Channel count:1
+    Channel number:Red\x3A 1
+    Relative weight of the channel:1.0
+    Image name:Channel1
+
+Align:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the alignment method:Normalized Cross Correlation
+    Crop mode:Keep size
+    Select the first input image:OneImage
+    Name the first output image:OneAligned
+    Select the second input image:TwoImage
+    Name the second output image:TwoAligned
+    Select the additional image:TwoOrigBlue
+    Name the output image:TwoAlignedBlue
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigGreen
+    Name the output image:TwoAlignedGreen
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigRed
+    Name the output image:TwoAlignedRed
+    Select how the alignment is to be applied:Similarly
+
+GrayToColor:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select a color scheme:RGB
+    Select the image to be colored red:TwoAlignedRed
+    Select the image to be colored green:TwoAlignedGreen
+    Select the image to be colored blue:TwoAlignedBlue
+    Name the output image:TwoAlignedFinal
+    Relative weight for the red image:1.0
+    Relative weight for the green image:1.0
+    Relative weight for the blue image:1.0
+    Select the image to be colored cyan:Leave this black
+    Select the image to be colored magenta:Leave this black
+    Select the image to be colored yellow:Leave this black
+    Select the image that determines brightness:Leave this black
+    Relative weight for the cyan image:1.0
+    Relative weight for the magenta image:1.0
+    Relative weight for the yellow image:1.0
+    Relative weight for the brightness image:1.0
+    Select the input image to add to the stacked image:None
+
+SaveImages:[module_num:23|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:TwoAlignedFinal
+    Select the objects to save:None
+    Select the module display window to save:None
+    Select method for constructing file names:Single name
+    Select image name for file prefix:None
+    Enter single file name:AlignedFinal2
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tif
+    Output file location:Default Input Folder sub-folder\x7CPictures\\\\\\\\CP
+    Image bit depth:8
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Rescale the images? :No
+    Save as grayscale or color image?:Grayscale
+    Select colormap:gray
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...\x7C
+    Saved movie format:avi
+
+ExportToSpreadsheet:[module_num:24|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:No
+    Limit output to a size that is allowed in Excel?:No
+    Select the measurements to export:Yes
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder\x7C
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:No
+    Press button to select measurements to export:Image\x7CAlign_Xshift_TwoAligned,Image\x7CAlign_Yshift_TwoAligned
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix\x3A:MyExpt_
+    Overwrite without warning?:No
+    Data to export:Image
+    Combine these object measurements with those of the previous object?:No
+    File name:Image2.csv
+    Use the object name for the file name?:No
+
+ConserveMemory:[module_num:25|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Specify which images?:Images to remove
+    Select image to remove:TwoAligned
+    Select image to remove:TwoAlignedFinal
+    Select image to remove:TwoAlignedBlue
+    Select image to remove:TwoAlignedGreen
+    Select image to remove:TwoAlignedRed
+    Select image to remove:TwoImage
+    Select image to remove:TwoOrigGreen
+    Select image to remove:TwoOrigRed
+    Select image to remove:TwoOrigBlue
+    Select image to remove:Two
+
+ConvertObjectsToImage:[module_num:26|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:ThreeObject
+    Name the output image:TwoImage
+    Select the color format:Binary (black & white)
+    Select the colormap:Default
+
+ColorToGray:[module_num:27|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Three
+    Conversion method:Split
+    Image type:RGB
+    Name the output image:OrigGray
+    Relative weight of the red channel:1.0
+    Relative weight of the green channel:1.0
+    Relative weight of the blue channel:1.0
+    Convert red to gray?:Yes
+    Name the output image:TwoOrigRed
+    Convert green to gray?:Yes
+    Name the output image:TwoOrigGreen
+    Convert blue to gray?:Yes
+    Name the output image:TwoOrigBlue
+    Convert hue to gray?:Yes
+    Name the output image:OrigHue
+    Convert saturation to gray?:Yes
+    Name the output image:OrigSaturation
+    Convert value to gray?:Yes
+    Name the output image:OrigValue
+    Channel count:1
+    Channel number:Red\x3A 1
+    Relative weight of the channel:1.0
+    Image name:Channel1
+
+Align:[module_num:28|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the alignment method:Normalized Cross Correlation
+    Crop mode:Keep size
+    Select the first input image:OneImage
+    Name the first output image:OneAligned
+    Select the second input image:TwoImage
+    Name the second output image:ThreeAligned
+    Select the additional image:TwoOrigBlue
+    Name the output image:TwoAlignedBlue
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigGreen
+    Name the output image:TwoAlignedGreen
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigRed
+    Name the output image:TwoAlignedRed
+    Select how the alignment is to be applied:Similarly
+
+GrayToColor:[module_num:29|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select a color scheme:RGB
+    Select the image to be colored red:TwoAlignedRed
+    Select the image to be colored green:TwoAlignedGreen
+    Select the image to be colored blue:TwoAlignedBlue
+    Name the output image:TwoAlignedFinal
+    Relative weight for the red image:1.0
+    Relative weight for the green image:1.0
+    Relative weight for the blue image:1.0
+    Select the image to be colored cyan:Leave this black
+    Select the image to be colored magenta:Leave this black
+    Select the image to be colored yellow:Leave this black
+    Select the image that determines brightness:Leave this black
+    Relative weight for the cyan image:1.0
+    Relative weight for the magenta image:1.0
+    Relative weight for the yellow image:1.0
+    Relative weight for the brightness image:1.0
+    Select the input image to add to the stacked image:None
+
+SaveImages:[module_num:30|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:TwoAlignedFinal
+    Select the objects to save:None
+    Select the module display window to save:None
+    Select method for constructing file names:Single name
+    Select image name for file prefix:None
+    Enter single file name:AlignedFinal3
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tif
+    Output file location:Default Input Folder sub-folder\x7CPictures\\\\\\\\CP
+    Image bit depth:8
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Rescale the images? :No
+    Save as grayscale or color image?:Grayscale
+    Select colormap:gray
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...\x7C
+    Saved movie format:avi
+
+ExportToSpreadsheet:[module_num:31|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:No
+    Limit output to a size that is allowed in Excel?:No
+    Select the measurements to export:Yes
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder\x7C
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:No
+    Press button to select measurements to export:Image\x7CAlign_Xshift_ThreeAligned,Image\x7CAlign_Yshift_ThreeAligned
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix\x3A:MyExpt_
+    Overwrite without warning?:No
+    Data to export:Image
+    Combine these object measurements with those of the previous object?:No
+    File name:Image3.csv
+    Use the object name for the file name?:No
+
+ConserveMemory:[module_num:32|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Specify which images?:Images to remove
+    Select image to remove:TwoAligned
+    Select image to remove:TwoAlignedFinal
+    Select image to remove:TwoAlignedBlue
+    Select image to remove:TwoAlignedGreen
+    Select image to remove:TwoAlignedRed
+    Select image to remove:TwoImage
+    Select image to remove:TwoOrigGreen
+    Select image to remove:TwoOrigRed
+    Select image to remove:TwoOrigBlue
+    Select image to remove:Two
+
+ConvertObjectsToImage:[module_num:33|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:FourObject
+    Name the output image:TwoImage
+    Select the color format:Binary (black & white)
+    Select the colormap:Default
+
+ColorToGray:[module_num:34|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Four
+    Conversion method:Split
+    Image type:RGB
+    Name the output image:OrigGray
+    Relative weight of the red channel:1.0
+    Relative weight of the green channel:1.0
+    Relative weight of the blue channel:1.0
+    Convert red to gray?:Yes
+    Name the output image:TwoOrigRed
+    Convert green to gray?:Yes
+    Name the output image:TwoOrigGreen
+    Convert blue to gray?:Yes
+    Name the output image:TwoOrigBlue
+    Convert hue to gray?:Yes
+    Name the output image:OrigHue
+    Convert saturation to gray?:Yes
+    Name the output image:OrigSaturation
+    Convert value to gray?:Yes
+    Name the output image:OrigValue
+    Channel count:1
+    Channel number:Red\x3A 1
+    Relative weight of the channel:1.0
+    Image name:Channel1
+
+Align:[module_num:35|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the alignment method:Normalized Cross Correlation
+    Crop mode:Keep size
+    Select the first input image:OneImage
+    Name the first output image:OneAligned
+    Select the second input image:TwoImage
+    Name the second output image:FourAligned
+    Select the additional image:TwoOrigBlue
+    Name the output image:TwoAlignedBlue
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigGreen
+    Name the output image:TwoAlignedGreen
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigRed
+    Name the output image:TwoAlignedRed
+    Select how the alignment is to be applied:Similarly
+
+GrayToColor:[module_num:36|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select a color scheme:RGB
+    Select the image to be colored red:TwoAlignedRed
+    Select the image to be colored green:TwoAlignedGreen
+    Select the image to be colored blue:TwoAlignedBlue
+    Name the output image:TwoAlignedFinal
+    Relative weight for the red image:1.0
+    Relative weight for the green image:1.0
+    Relative weight for the blue image:1.0
+    Select the image to be colored cyan:Leave this black
+    Select the image to be colored magenta:Leave this black
+    Select the image to be colored yellow:Leave this black
+    Select the image that determines brightness:Leave this black
+    Relative weight for the cyan image:1.0
+    Relative weight for the magenta image:1.0
+    Relative weight for the yellow image:1.0
+    Relative weight for the brightness image:1.0
+    Select the input image to add to the stacked image:None
+
+SaveImages:[module_num:37|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:TwoAlignedFinal
+    Select the objects to save:None
+    Select the module display window to save:None
+    Select method for constructing file names:Single name
+    Select image name for file prefix:None
+    Enter single file name:AlignedFinal4
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tif
+    Output file location:Default Input Folder sub-folder\x7CPictures\\\\\\\\CP
+    Image bit depth:8
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Rescale the images? :No
+    Save as grayscale or color image?:Grayscale
+    Select colormap:gray
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...\x7C
+    Saved movie format:avi
+
+ExportToSpreadsheet:[module_num:38|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:No
+    Limit output to a size that is allowed in Excel?:No
+    Select the measurements to export:Yes
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder\x7C
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:No
+    Press button to select measurements to export:Image\x7CAlign_Xshift_FourAligned,Image\x7CAlign_Yshift_FourAligned
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix\x3A:MyExpt_
+    Overwrite without warning?:No
+    Data to export:Image
+    Combine these object measurements with those of the previous object?:No
+    File name:Image4.csv
+    Use the object name for the file name?:No
+
+ConserveMemory:[module_num:39|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Specify which images?:Images to remove
+    Select image to remove:TwoAligned
+    Select image to remove:TwoAlignedFinal
+    Select image to remove:TwoAlignedBlue
+    Select image to remove:TwoAlignedGreen
+    Select image to remove:TwoAlignedRed
+    Select image to remove:TwoImage
+    Select image to remove:TwoOrigGreen
+    Select image to remove:TwoOrigRed
+    Select image to remove:TwoOrigBlue
+    Select image to remove:Two
+
+ConvertObjectsToImage:[module_num:40|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:FiveObject
+    Name the output image:TwoImage
+    Select the color format:Binary (black & white)
+    Select the colormap:Default
+
+ColorToGray:[module_num:41|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Five
+    Conversion method:Split
+    Image type:RGB
+    Name the output image:OrigGray
+    Relative weight of the red channel:1.0
+    Relative weight of the green channel:1.0
+    Relative weight of the blue channel:1.0
+    Convert red to gray?:Yes
+    Name the output image:TwoOrigRed
+    Convert green to gray?:Yes
+    Name the output image:TwoOrigGreen
+    Convert blue to gray?:Yes
+    Name the output image:TwoOrigBlue
+    Convert hue to gray?:Yes
+    Name the output image:OrigHue
+    Convert saturation to gray?:Yes
+    Name the output image:OrigSaturation
+    Convert value to gray?:Yes
+    Name the output image:OrigValue
+    Channel count:1
+    Channel number:Red\x3A 1
+    Relative weight of the channel:1.0
+    Image name:Channel1
+
+Align:[module_num:42|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the alignment method:Normalized Cross Correlation
+    Crop mode:Keep size
+    Select the first input image:OneImage
+    Name the first output image:OneAligned
+    Select the second input image:TwoImage
+    Name the second output image:FiveAligned
+    Select the additional image:TwoOrigBlue
+    Name the output image:TwoAlignedBlue
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigGreen
+    Name the output image:TwoAlignedGreen
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigRed
+    Name the output image:TwoAlignedRed
+    Select how the alignment is to be applied:Similarly
+
+GrayToColor:[module_num:43|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select a color scheme:RGB
+    Select the image to be colored red:TwoAlignedRed
+    Select the image to be colored green:TwoAlignedGreen
+    Select the image to be colored blue:TwoAlignedBlue
+    Name the output image:TwoAlignedFinal
+    Relative weight for the red image:1.0
+    Relative weight for the green image:1.0
+    Relative weight for the blue image:1.0
+    Select the image to be colored cyan:Leave this black
+    Select the image to be colored magenta:Leave this black
+    Select the image to be colored yellow:Leave this black
+    Select the image that determines brightness:Leave this black
+    Relative weight for the cyan image:1.0
+    Relative weight for the magenta image:1.0
+    Relative weight for the yellow image:1.0
+    Relative weight for the brightness image:1.0
+    Select the input image to add to the stacked image:None
+
+SaveImages:[module_num:44|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:TwoAlignedFinal
+    Select the objects to save:None
+    Select the module display window to save:None
+    Select method for constructing file names:Single name
+    Select image name for file prefix:None
+    Enter single file name:AlignedFinal5
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tif
+    Output file location:Default Input Folder sub-folder\x7CPictures\\\\\\\\CP
+    Image bit depth:8
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Rescale the images? :No
+    Save as grayscale or color image?:Grayscale
+    Select colormap:gray
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...\x7C
+    Saved movie format:avi
+
+ExportToSpreadsheet:[module_num:45|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:No
+    Limit output to a size that is allowed in Excel?:No
+    Select the measurements to export:Yes
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder\x7C
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:No
+    Press button to select measurements to export:Image\x7CAlign_Xshift_FiveAligned,Image\x7CAlign_Yshift_FiveAligned
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix\x3A:MyExpt_
+    Overwrite without warning?:No
+    Data to export:Image
+    Combine these object measurements with those of the previous object?:No
+    File name:Image5.csv
+    Use the object name for the file name?:No
+
+ConserveMemory:[module_num:46|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Specify which images?:Images to remove
+    Select image to remove:TwoAligned
+    Select image to remove:TwoAlignedFinal
+    Select image to remove:TwoAlignedBlue
+    Select image to remove:TwoAlignedGreen
+    Select image to remove:TwoAlignedRed
+    Select image to remove:TwoImage
+    Select image to remove:TwoOrigGreen
+    Select image to remove:TwoOrigRed
+    Select image to remove:TwoOrigBlue
+    Select image to remove:Two
+
+ConvertObjectsToImage:[module_num:47|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:SixObject
+    Name the output image:TwoImage
+    Select the color format:Binary (black & white)
+    Select the colormap:Default
+
+ColorToGray:[module_num:48|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Six
+    Conversion method:Split
+    Image type:RGB
+    Name the output image:OrigGray
+    Relative weight of the red channel:1.0
+    Relative weight of the green channel:1.0
+    Relative weight of the blue channel:1.0
+    Convert red to gray?:Yes
+    Name the output image:TwoOrigRed
+    Convert green to gray?:Yes
+    Name the output image:TwoOrigGreen
+    Convert blue to gray?:Yes
+    Name the output image:TwoOrigBlue
+    Convert hue to gray?:Yes
+    Name the output image:OrigHue
+    Convert saturation to gray?:Yes
+    Name the output image:OrigSaturation
+    Convert value to gray?:Yes
+    Name the output image:OrigValue
+    Channel count:1
+    Channel number:Red\x3A 1
+    Relative weight of the channel:1.0
+    Image name:Channel1
+
+Align:[module_num:49|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the alignment method:Normalized Cross Correlation
+    Crop mode:Keep size
+    Select the first input image:OneImage
+    Name the first output image:OneAligned
+    Select the second input image:TwoImage
+    Name the second output image:SixAligned
+    Select the additional image:TwoOrigBlue
+    Name the output image:TwoAlignedBlue
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigGreen
+    Name the output image:TwoAlignedGreen
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigRed
+    Name the output image:TwoAlignedRed
+    Select how the alignment is to be applied:Similarly
+
+GrayToColor:[module_num:50|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select a color scheme:RGB
+    Select the image to be colored red:TwoAlignedRed
+    Select the image to be colored green:TwoAlignedGreen
+    Select the image to be colored blue:TwoAlignedBlue
+    Name the output image:TwoAlignedFinal
+    Relative weight for the red image:1.0
+    Relative weight for the green image:1.0
+    Relative weight for the blue image:1.0
+    Select the image to be colored cyan:Leave this black
+    Select the image to be colored magenta:Leave this black
+    Select the image to be colored yellow:Leave this black
+    Select the image that determines brightness:Leave this black
+    Relative weight for the cyan image:1.0
+    Relative weight for the magenta image:1.0
+    Relative weight for the yellow image:1.0
+    Relative weight for the brightness image:1.0
+    Select the input image to add to the stacked image:None
+
+SaveImages:[module_num:51|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:TwoAlignedFinal
+    Select the objects to save:None
+    Select the module display window to save:None
+    Select method for constructing file names:Single name
+    Select image name for file prefix:None
+    Enter single file name:AlignedFinal6
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tif
+    Output file location:Default Input Folder sub-folder\x7CPictures\\\\\\\\CP
+    Image bit depth:8
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Rescale the images? :No
+    Save as grayscale or color image?:Grayscale
+    Select colormap:gray
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...\x7C
+    Saved movie format:avi
+
+ExportToSpreadsheet:[module_num:52|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:No
+    Limit output to a size that is allowed in Excel?:No
+    Select the measurements to export:Yes
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder\x7C
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:No
+    Press button to select measurements to export:Image\x7CAlign_Xshift_SixAligned,Image\x7CAlign_Yshift_SixAligned
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix\x3A:MyExpt_
+    Overwrite without warning?:No
+    Data to export:Image
+    Combine these object measurements with those of the previous object?:No
+    File name:Image6.csv
+    Use the object name for the file name?:No
+
+ConserveMemory:[module_num:53|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Specify which images?:Images to remove
+    Select image to remove:TwoAligned
+    Select image to remove:TwoAlignedFinal
+    Select image to remove:TwoAlignedBlue
+    Select image to remove:TwoAlignedGreen
+    Select image to remove:TwoAlignedRed
+    Select image to remove:TwoImage
+    Select image to remove:TwoOrigGreen
+    Select image to remove:TwoOrigRed
+    Select image to remove:TwoOrigBlue
+    Select image to remove:Two
+
+ConvertObjectsToImage:[module_num:54|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:SevenObject
+    Name the output image:TwoImage
+    Select the color format:Binary (black & white)
+    Select the colormap:Default
+
+ColorToGray:[module_num:55|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Seven
+    Conversion method:Split
+    Image type:RGB
+    Name the output image:OrigGray
+    Relative weight of the red channel:1.0
+    Relative weight of the green channel:1.0
+    Relative weight of the blue channel:1.0
+    Convert red to gray?:Yes
+    Name the output image:TwoOrigRed
+    Convert green to gray?:Yes
+    Name the output image:TwoOrigGreen
+    Convert blue to gray?:Yes
+    Name the output image:TwoOrigBlue
+    Convert hue to gray?:Yes
+    Name the output image:OrigHue
+    Convert saturation to gray?:Yes
+    Name the output image:OrigSaturation
+    Convert value to gray?:Yes
+    Name the output image:OrigValue
+    Channel count:1
+    Channel number:Red\x3A 1
+    Relative weight of the channel:1.0
+    Image name:Channel1
+
+Align:[module_num:56|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the alignment method:Normalized Cross Correlation
+    Crop mode:Keep size
+    Select the first input image:OneImage
+    Name the first output image:OneAligned
+    Select the second input image:TwoImage
+    Name the second output image:SevenAligned
+    Select the additional image:TwoOrigBlue
+    Name the output image:TwoAlignedBlue
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigGreen
+    Name the output image:TwoAlignedGreen
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigRed
+    Name the output image:TwoAlignedRed
+    Select how the alignment is to be applied:Similarly
+
+GrayToColor:[module_num:57|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select a color scheme:RGB
+    Select the image to be colored red:TwoAlignedRed
+    Select the image to be colored green:TwoAlignedGreen
+    Select the image to be colored blue:TwoAlignedBlue
+    Name the output image:TwoAlignedFinal
+    Relative weight for the red image:1.0
+    Relative weight for the green image:1.0
+    Relative weight for the blue image:1.0
+    Select the image to be colored cyan:Leave this black
+    Select the image to be colored magenta:Leave this black
+    Select the image to be colored yellow:Leave this black
+    Select the image that determines brightness:Leave this black
+    Relative weight for the cyan image:1.0
+    Relative weight for the magenta image:1.0
+    Relative weight for the yellow image:1.0
+    Relative weight for the brightness image:1.0
+    Select the input image to add to the stacked image:None
+
+SaveImages:[module_num:58|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:TwoAlignedFinal
+    Select the objects to save:None
+    Select the module display window to save:None
+    Select method for constructing file names:Single name
+    Select image name for file prefix:None
+    Enter single file name:AlignedFinal7
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tif
+    Output file location:Default Input Folder sub-folder\x7CPictures\\\\\\\\CP
+    Image bit depth:8
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Rescale the images? :No
+    Save as grayscale or color image?:Grayscale
+    Select colormap:gray
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...\x7C
+    Saved movie format:avi
+
+ExportToSpreadsheet:[module_num:59|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:No
+    Limit output to a size that is allowed in Excel?:No
+    Select the measurements to export:Yes
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder\x7C
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:No
+    Press button to select measurements to export:Image\x7CAlign_Xshift_SevenAligned,Image\x7CAlign_Yshift_SevenAligned
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix\x3A:MyExpt_
+    Overwrite without warning?:No
+    Data to export:Image
+    Combine these object measurements with those of the previous object?:No
+    File name:Image7.csv
+    Use the object name for the file name?:No
+
+ConserveMemory:[module_num:60|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Specify which images?:Images to remove
+    Select image to remove:TwoAligned
+    Select image to remove:TwoAlignedFinal
+    Select image to remove:TwoAlignedBlue
+    Select image to remove:TwoAlignedGreen
+    Select image to remove:TwoAlignedRed
+    Select image to remove:TwoImage
+    Select image to remove:TwoOrigGreen
+    Select image to remove:TwoOrigRed
+    Select image to remove:TwoOrigBlue
+    Select image to remove:Two
+
+ConvertObjectsToImage:[module_num:61|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:EightObject
+    Name the output image:TwoImage
+    Select the color format:Binary (black & white)
+    Select the colormap:Default
+
+ColorToGray:[module_num:62|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Eight
+    Conversion method:Split
+    Image type:RGB
+    Name the output image:OrigGray
+    Relative weight of the red channel:1.0
+    Relative weight of the green channel:1.0
+    Relative weight of the blue channel:1.0
+    Convert red to gray?:Yes
+    Name the output image:TwoOrigRed
+    Convert green to gray?:Yes
+    Name the output image:TwoOrigGreen
+    Convert blue to gray?:Yes
+    Name the output image:TwoOrigBlue
+    Convert hue to gray?:Yes
+    Name the output image:OrigHue
+    Convert saturation to gray?:Yes
+    Name the output image:OrigSaturation
+    Convert value to gray?:Yes
+    Name the output image:OrigValue
+    Channel count:1
+    Channel number:Red\x3A 1
+    Relative weight of the channel:1.0
+    Image name:Channel1
+
+Align:[module_num:63|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the alignment method:Normalized Cross Correlation
+    Crop mode:Keep size
+    Select the first input image:OneImage
+    Name the first output image:OneAligned
+    Select the second input image:TwoImage
+    Name the second output image:EightAligned
+    Select the additional image:TwoOrigBlue
+    Name the output image:TwoAlignedBlue
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigGreen
+    Name the output image:TwoAlignedGreen
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigRed
+    Name the output image:TwoAlignedRed
+    Select how the alignment is to be applied:Similarly
+
+GrayToColor:[module_num:64|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select a color scheme:RGB
+    Select the image to be colored red:TwoAlignedRed
+    Select the image to be colored green:TwoAlignedGreen
+    Select the image to be colored blue:TwoAlignedBlue
+    Name the output image:TwoAlignedFinal
+    Relative weight for the red image:1.0
+    Relative weight for the green image:1.0
+    Relative weight for the blue image:1.0
+    Select the image to be colored cyan:Leave this black
+    Select the image to be colored magenta:Leave this black
+    Select the image to be colored yellow:Leave this black
+    Select the image that determines brightness:Leave this black
+    Relative weight for the cyan image:1.0
+    Relative weight for the magenta image:1.0
+    Relative weight for the yellow image:1.0
+    Relative weight for the brightness image:1.0
+    Select the input image to add to the stacked image:None
+
+SaveImages:[module_num:65|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:TwoAlignedFinal
+    Select the objects to save:None
+    Select the module display window to save:None
+    Select method for constructing file names:Single name
+    Select image name for file prefix:None
+    Enter single file name:AlignedFinal8
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tif
+    Output file location:Default Input Folder sub-folder\x7CPictures\\\\\\\\CP
+    Image bit depth:8
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Rescale the images? :No
+    Save as grayscale or color image?:Grayscale
+    Select colormap:gray
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...\x7C
+    Saved movie format:avi
+
+ExportToSpreadsheet:[module_num:66|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:No
+    Limit output to a size that is allowed in Excel?:No
+    Select the measurements to export:Yes
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder\x7C
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:No
+    Press button to select measurements to export:Image\x7CAlign_Xshift_EightAligned,Image\x7CAlign_Yshift_EightAligned
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix\x3A:MyExpt_
+    Overwrite without warning?:No
+    Data to export:Image
+    Combine these object measurements with those of the previous object?:No
+    File name:Image8.csv
+    Use the object name for the file name?:No
+
+ConserveMemory:[module_num:67|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Specify which images?:Images to remove
+    Select image to remove:TwoAligned
+    Select image to remove:TwoAlignedFinal
+    Select image to remove:TwoAlignedBlue
+    Select image to remove:TwoAlignedGreen
+    Select image to remove:TwoAlignedRed
+    Select image to remove:TwoImage
+    Select image to remove:TwoOrigGreen
+    Select image to remove:TwoOrigRed
+    Select image to remove:TwoOrigBlue
+    Select image to remove:Two
+
+ConvertObjectsToImage:[module_num:68|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:NineObject
+    Name the output image:TwoImage
+    Select the color format:Binary (black & white)
+    Select the colormap:Default
+
+ColorToGray:[module_num:69|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Nine
+    Conversion method:Split
+    Image type:RGB
+    Name the output image:OrigGray
+    Relative weight of the red channel:1.0
+    Relative weight of the green channel:1.0
+    Relative weight of the blue channel:1.0
+    Convert red to gray?:Yes
+    Name the output image:TwoOrigRed
+    Convert green to gray?:Yes
+    Name the output image:TwoOrigGreen
+    Convert blue to gray?:Yes
+    Name the output image:TwoOrigBlue
+    Convert hue to gray?:Yes
+    Name the output image:OrigHue
+    Convert saturation to gray?:Yes
+    Name the output image:OrigSaturation
+    Convert value to gray?:Yes
+    Name the output image:OrigValue
+    Channel count:1
+    Channel number:Red\x3A 1
+    Relative weight of the channel:1.0
+    Image name:Channel1
+
+Align:[module_num:70|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the alignment method:Normalized Cross Correlation
+    Crop mode:Keep size
+    Select the first input image:OneImage
+    Name the first output image:OneAligned
+    Select the second input image:TwoImage
+    Name the second output image:NineAligned
+    Select the additional image:TwoOrigBlue
+    Name the output image:TwoAlignedBlue
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigGreen
+    Name the output image:TwoAlignedGreen
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigRed
+    Name the output image:TwoAlignedRed
+    Select how the alignment is to be applied:Similarly
+
+GrayToColor:[module_num:71|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select a color scheme:RGB
+    Select the image to be colored red:TwoAlignedRed
+    Select the image to be colored green:TwoAlignedGreen
+    Select the image to be colored blue:TwoAlignedBlue
+    Name the output image:TwoAlignedFinal
+    Relative weight for the red image:1.0
+    Relative weight for the green image:1.0
+    Relative weight for the blue image:1.0
+    Select the image to be colored cyan:Leave this black
+    Select the image to be colored magenta:Leave this black
+    Select the image to be colored yellow:Leave this black
+    Select the image that determines brightness:Leave this black
+    Relative weight for the cyan image:1.0
+    Relative weight for the magenta image:1.0
+    Relative weight for the yellow image:1.0
+    Relative weight for the brightness image:1.0
+    Select the input image to add to the stacked image:None
+
+SaveImages:[module_num:72|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:TwoAlignedFinal
+    Select the objects to save:None
+    Select the module display window to save:None
+    Select method for constructing file names:Single name
+    Select image name for file prefix:None
+    Enter single file name:AlignedFinal9
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tif
+    Output file location:Default Input Folder sub-folder\x7CPictures\\\\\\\\CP
+    Image bit depth:8
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Rescale the images? :No
+    Save as grayscale or color image?:Grayscale
+    Select colormap:gray
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...\x7C
+    Saved movie format:avi
+
+ExportToSpreadsheet:[module_num:73|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:No
+    Limit output to a size that is allowed in Excel?:No
+    Select the measurements to export:Yes
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder\x7C
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:No
+    Press button to select measurements to export:Image\x7CAlign_Xshift_NineAligned,Image\x7CAlign_Yshift_NineAligned
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix\x3A:MyExpt_
+    Overwrite without warning?:No
+    Data to export:Image
+    Combine these object measurements with those of the previous object?:No
+    File name:Image9.csv
+    Use the object name for the file name?:No
+
+ConserveMemory:[module_num:74|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Specify which images?:Images to remove
+    Select image to remove:TwoAligned
+    Select image to remove:TwoAlignedFinal
+    Select image to remove:TwoAlignedBlue
+    Select image to remove:TwoAlignedGreen
+    Select image to remove:TwoAlignedRed
+    Select image to remove:TwoImage
+    Select image to remove:TwoOrigGreen
+    Select image to remove:TwoOrigRed
+    Select image to remove:TwoOrigBlue
+    Select image to remove:Two
+
+ConvertObjectsToImage:[module_num:75|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:TenObject
+    Name the output image:TwoImage
+    Select the color format:Binary (black & white)
+    Select the colormap:Default
+
+ColorToGray:[module_num:76|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Ten
+    Conversion method:Split
+    Image type:RGB
+    Name the output image:OrigGray
+    Relative weight of the red channel:1.0
+    Relative weight of the green channel:1.0
+    Relative weight of the blue channel:1.0
+    Convert red to gray?:Yes
+    Name the output image:TwoOrigRed
+    Convert green to gray?:Yes
+    Name the output image:TwoOrigGreen
+    Convert blue to gray?:Yes
+    Name the output image:TwoOrigBlue
+    Convert hue to gray?:Yes
+    Name the output image:OrigHue
+    Convert saturation to gray?:Yes
+    Name the output image:OrigSaturation
+    Convert value to gray?:Yes
+    Name the output image:OrigValue
+    Channel count:1
+    Channel number:Red\x3A 1
+    Relative weight of the channel:1.0
+    Image name:Channel1
+
+Align:[module_num:77|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the alignment method:Normalized Cross Correlation
+    Crop mode:Keep size
+    Select the first input image:OneImage
+    Name the first output image:OneAligned
+    Select the second input image:TwoImage
+    Name the second output image:TenAligned
+    Select the additional image:TwoOrigBlue
+    Name the output image:TwoAlignedBlue
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigGreen
+    Name the output image:TwoAlignedGreen
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigRed
+    Name the output image:TwoAlignedRed
+    Select how the alignment is to be applied:Similarly
+
+GrayToColor:[module_num:78|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select a color scheme:RGB
+    Select the image to be colored red:TwoAlignedRed
+    Select the image to be colored green:TwoAlignedGreen
+    Select the image to be colored blue:TwoAlignedBlue
+    Name the output image:TwoAlignedFinal
+    Relative weight for the red image:1.0
+    Relative weight for the green image:1.0
+    Relative weight for the blue image:1.0
+    Select the image to be colored cyan:Leave this black
+    Select the image to be colored magenta:Leave this black
+    Select the image to be colored yellow:Leave this black
+    Select the image that determines brightness:Leave this black
+    Relative weight for the cyan image:1.0
+    Relative weight for the magenta image:1.0
+    Relative weight for the yellow image:1.0
+    Relative weight for the brightness image:1.0
+    Select the input image to add to the stacked image:None
+
+SaveImages:[module_num:79|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:TwoAlignedFinal
+    Select the objects to save:None
+    Select the module display window to save:None
+    Select method for constructing file names:Single name
+    Select image name for file prefix:None
+    Enter single file name:AlignedFinal10
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tif
+    Output file location:Default Input Folder sub-folder\x7CPictures\\\\\\\\CP
+    Image bit depth:8
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Rescale the images? :No
+    Save as grayscale or color image?:Grayscale
+    Select colormap:gray
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...\x7C
+    Saved movie format:avi
+
+ExportToSpreadsheet:[module_num:80|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:No
+    Limit output to a size that is allowed in Excel?:No
+    Select the measurements to export:Yes
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder\x7C
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:No
+    Press button to select measurements to export:Image\x7CAlign_Xshift_TenAligned,Image\x7CAlign_Yshift_TenAligned
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix\x3A:MyExpt_
+    Overwrite without warning?:No
+    Data to export:Image
+    Combine these object measurements with those of the previous object?:No
+    File name:Image10.csv
+    Use the object name for the file name?:No
+
+ConserveMemory:[module_num:81|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Specify which images?:Images to remove
+    Select image to remove:TwoAligned
+    Select image to remove:TwoAlignedFinal
+    Select image to remove:TwoAlignedBlue
+    Select image to remove:TwoAlignedGreen
+    Select image to remove:TwoAlignedRed
+    Select image to remove:TwoImage
+    Select image to remove:TwoOrigGreen
+    Select image to remove:TwoOrigRed
+    Select image to remove:TwoOrigBlue
+    Select image to remove:Two
+
+ConvertObjectsToImage:[module_num:82|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:ElevenObject
+    Name the output image:TwoImage
+    Select the color format:Binary (black & white)
+    Select the colormap:Default
+
+ColorToGray:[module_num:83|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Eleven
+    Conversion method:Split
+    Image type:RGB
+    Name the output image:OrigGray
+    Relative weight of the red channel:1.0
+    Relative weight of the green channel:1.0
+    Relative weight of the blue channel:1.0
+    Convert red to gray?:Yes
+    Name the output image:TwoOrigRed
+    Convert green to gray?:Yes
+    Name the output image:TwoOrigGreen
+    Convert blue to gray?:Yes
+    Name the output image:TwoOrigBlue
+    Convert hue to gray?:Yes
+    Name the output image:OrigHue
+    Convert saturation to gray?:Yes
+    Name the output image:OrigSaturation
+    Convert value to gray?:Yes
+    Name the output image:OrigValue
+    Channel count:1
+    Channel number:Red\x3A 1
+    Relative weight of the channel:1.0
+    Image name:Channel1
+
+Align:[module_num:84|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the alignment method:Normalized Cross Correlation
+    Crop mode:Keep size
+    Select the first input image:OneImage
+    Name the first output image:OneAligned
+    Select the second input image:TwoImage
+    Name the second output image:ElevenAligned
+    Select the additional image:TwoOrigBlue
+    Name the output image:TwoAlignedBlue
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigGreen
+    Name the output image:TwoAlignedGreen
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigRed
+    Name the output image:TwoAlignedRed
+    Select how the alignment is to be applied:Similarly
+
+GrayToColor:[module_num:85|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select a color scheme:RGB
+    Select the image to be colored red:TwoAlignedRed
+    Select the image to be colored green:TwoAlignedGreen
+    Select the image to be colored blue:TwoAlignedBlue
+    Name the output image:TwoAlignedFinal
+    Relative weight for the red image:1.0
+    Relative weight for the green image:1.0
+    Relative weight for the blue image:1.0
+    Select the image to be colored cyan:Leave this black
+    Select the image to be colored magenta:Leave this black
+    Select the image to be colored yellow:Leave this black
+    Select the image that determines brightness:Leave this black
+    Relative weight for the cyan image:1.0
+    Relative weight for the magenta image:1.0
+    Relative weight for the yellow image:1.0
+    Relative weight for the brightness image:1.0
+    Select the input image to add to the stacked image:None
+
+SaveImages:[module_num:86|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:TwoAlignedFinal
+    Select the objects to save:None
+    Select the module display window to save:None
+    Select method for constructing file names:Single name
+    Select image name for file prefix:None
+    Enter single file name:AlignedFinal11
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tif
+    Output file location:Default Input Folder sub-folder\x7CPictures\\\\\\\\CP
+    Image bit depth:8
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Rescale the images? :No
+    Save as grayscale or color image?:Grayscale
+    Select colormap:gray
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...\x7C
+    Saved movie format:avi
+
+ExportToSpreadsheet:[module_num:87|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:No
+    Limit output to a size that is allowed in Excel?:No
+    Select the measurements to export:Yes
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder\x7C
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:No
+    Press button to select measurements to export:Image\x7CAlign_Xshift_ElevenAligned,Image\x7CAlign_Yshift_ElevenAligned
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix\x3A:MyExpt_
+    Overwrite without warning?:No
+    Data to export:Image
+    Combine these object measurements with those of the previous object?:No
+    File name:Image11.csv
+    Use the object name for the file name?:No
+
+ConserveMemory:[module_num:88|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Specify which images?:Images to remove
+    Select image to remove:TwoAligned
+    Select image to remove:TwoAlignedFinal
+    Select image to remove:TwoAlignedBlue
+    Select image to remove:TwoAlignedGreen
+    Select image to remove:TwoAlignedRed
+    Select image to remove:TwoImage
+    Select image to remove:TwoOrigGreen
+    Select image to remove:TwoOrigRed
+    Select image to remove:TwoOrigBlue
+    Select image to remove:Two
+
+ConvertObjectsToImage:[module_num:89|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:TwelveObject
+    Name the output image:TwoImage
+    Select the color format:Binary (black & white)
+    Select the colormap:Default
+
+ColorToGray:[module_num:90|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Twelve
+    Conversion method:Split
+    Image type:RGB
+    Name the output image:OrigGray
+    Relative weight of the red channel:1.0
+    Relative weight of the green channel:1.0
+    Relative weight of the blue channel:1.0
+    Convert red to gray?:Yes
+    Name the output image:TwoOrigRed
+    Convert green to gray?:Yes
+    Name the output image:TwoOrigGreen
+    Convert blue to gray?:Yes
+    Name the output image:TwoOrigBlue
+    Convert hue to gray?:Yes
+    Name the output image:OrigHue
+    Convert saturation to gray?:Yes
+    Name the output image:OrigSaturation
+    Convert value to gray?:Yes
+    Name the output image:OrigValue
+    Channel count:1
+    Channel number:Red\x3A 1
+    Relative weight of the channel:1.0
+    Image name:Channel1
+
+Align:[module_num:91|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the alignment method:Normalized Cross Correlation
+    Crop mode:Keep size
+    Select the first input image:OneImage
+    Name the first output image:OneAligned
+    Select the second input image:TwoImage
+    Name the second output image:TwelveAligned
+    Select the additional image:TwoOrigBlue
+    Name the output image:TwoAlignedBlue
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigGreen
+    Name the output image:TwoAlignedGreen
+    Select how the alignment is to be applied:Similarly
+    Select the additional image:TwoOrigRed
+    Name the output image:TwoAlignedRed
+    Select how the alignment is to be applied:Similarly
+
+GrayToColor:[module_num:92|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select a color scheme:RGB
+    Select the image to be colored red:TwoAlignedRed
+    Select the image to be colored green:TwoAlignedGreen
+    Select the image to be colored blue:TwoAlignedBlue
+    Name the output image:TwoAlignedFinal
+    Relative weight for the red image:1.0
+    Relative weight for the green image:1.0
+    Relative weight for the blue image:1.0
+    Select the image to be colored cyan:Leave this black
+    Select the image to be colored magenta:Leave this black
+    Select the image to be colored yellow:Leave this black
+    Select the image that determines brightness:Leave this black
+    Relative weight for the cyan image:1.0
+    Relative weight for the magenta image:1.0
+    Relative weight for the yellow image:1.0
+    Relative weight for the brightness image:1.0
+    Select the input image to add to the stacked image:None
+
+SaveImages:[module_num:93|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:TwoAlignedFinal
+    Select the objects to save:None
+    Select the module display window to save:None
+    Select method for constructing file names:Single name
+    Select image name for file prefix:None
+    Enter single file name:AlignedFinal12
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tif
+    Output file location:Default Input Folder sub-folder\x7CPictures\\\\\\\\CP
+    Image bit depth:8
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Rescale the images? :No
+    Save as grayscale or color image?:Grayscale
+    Select colormap:gray
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...\x7C
+    Saved movie format:avi
+
+ExportToSpreadsheet:[module_num:94|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:No
+    Limit output to a size that is allowed in Excel?:No
+    Select the measurements to export:Yes
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder\x7C
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:No
+    Press button to select measurements to export:Image\x7CAlign_Xshift_TwelveAligned,Image\x7CAlign_Yshift_TwelveAligned
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix\x3A:MyExpt_
+    Overwrite without warning?:No
+    Data to export:Image
+    Combine these object measurements with those of the previous object?:No
+    File name:Image12.csv
+    Use the object name for the file name?:No
+
+ConserveMemory:[module_num:95|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Specify which images?:Images to remove
+    Select image to remove:TwoAligned
+    Select image to remove:TwoAlignedFinal
+    Select image to remove:TwoAlignedBlue
+    Select image to remove:TwoAlignedGreen
+    Select image to remove:TwoAlignedRed
+    Select image to remove:TwoImage
+    Select image to remove:TwoOrigGreen
+    Select image to remove:TwoOrigRed
+    Select image to remove:TwoOrigBlue
+    Select image to remove:Two
